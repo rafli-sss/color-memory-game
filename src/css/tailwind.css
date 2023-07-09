@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .color-card {
+    @apply aspect-square rounded-lg cursor-pointer transition duration-300 hover:scale-95;
+  }
+}

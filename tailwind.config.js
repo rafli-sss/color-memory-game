@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ['./dist/index.html'],
+  presets: [require('./tailwind-container.config.js')],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: { display: ['Coiny', 'cursive'] },
+    },
   },
   plugins: [],
-}
-
+};
