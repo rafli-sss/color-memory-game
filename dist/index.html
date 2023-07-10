@@ -7,10 +7,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -25,11 +31,14 @@
     </header>
     <main>
       <div class="container h-screen anim">
-        <div class="h-full grid grid-cols-3 content-center gap-2 md:grid-cols-4 md:gap-4" x-data="gameInit()">
+        <div
+          class="h-full grid grid-cols-3 content-center gap-2 md:grid-cols-4 md:gap-4"
+          x-data="gameInit()"
+        >
           <template x-for="card in cards">
             <div
               class="color-card"
-              :class="[card.isFlipped ? card.color : 'bg-gray-500', card.animate, card.isCleared ? 'opacity-0' : '']"
+              :class="[card.isFlipped ? card.color : 'bg-gray-500', card.animate, card.isMatched ? 'opacity-0' : '', card.isCleared ? 'invisible' : '']"
               @click="flipCard($el, card)"
             ></div>
           </template>

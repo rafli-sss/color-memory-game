@@ -103,7 +103,7 @@ const gameInit = () => {
         // Fold all card
         await setDelay(500);
         flippedCards.forEach((card) => (card.isFlipped = false));
-
+        console.log(flippedCards);
         this.remainingCards.forEach((card) => {
           card.animate = '';
         });
